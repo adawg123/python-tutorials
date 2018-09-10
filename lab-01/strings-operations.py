@@ -2,14 +2,20 @@
 
 my_string = "My string has many spaces let me see how many"
 
-print my_string.split()
+my_list = my_string.split()
 
-print "Lets loop through the strings"
+print my_list
 
-for s in my_string.split():
-    print ("String literal ", s)
+first_item = my_list[7]
 
-my_string = "My,string,has,many,commas,let,me,see,how,many"
+print first_item
+
+# print "Lets loop through the strings"
+
+# for s in my_string.split():
+  #  print ("String literal ", s)
+
+# my_string = "My,string,has,many,commas,let,me,see,how,many"
 
 # Assignment
 # Count number of , in the string

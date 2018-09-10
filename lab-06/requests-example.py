@@ -1,8 +1,19 @@
+#!/usr/bin/python
 import requests
 
-r = requests.get('http://wwww.yelp.com')
-if r.status_code == 200:
-    print r.content
+    
+def count_yelp(text):
+    all_words = text.split()
+    yelp_count = all_words.count('Yelp')
+    return yelp_count
+
+def replace_yelp(text):
+    return text.replace('Yelp','google')
+
+    r = requests.get('http://wwww.yelp.com')
+    if r.status_code == 200:
+    print count_yelp(r.text)
+
 
 
 # Assignment 
