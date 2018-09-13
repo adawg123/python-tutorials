@@ -2,7 +2,7 @@ import boto3
 
 
 def create_instance():
-    ec2_resource = boto3.resource('ec2')
+    ec2_resource = boto3.resource('ec2',region_name="us-east-1")
     instances = ec2_resource.create_instances(ImageId='ami-6871a115',
                 MinCount=1, MaxCount=1,InstanceType='t2.micro',
                 SecurityGroupIds=['launch-wizard-3'],KeyName='fullstack')
