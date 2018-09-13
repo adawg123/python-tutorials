@@ -5,7 +5,7 @@ def create_instance():
     ec2_resource = boto3.resource('ec2')
     instances = ec2_resource.create_instances(ImageId='ami-49f0762d',
                 MinCount=1, MaxCount=1,InstanceType='t2.micro',
-                SecurityGroupIds=['ansible-node'],KeyName='ansible')
+                SecurityGroupIds=['launch-wizard-3'],KeyName='fullstack')
     for instance in instances:
         print instance
     ec2_client = boto3.client('ec2')
